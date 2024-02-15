@@ -1,0 +1,49 @@
+django-admin startproject myproject
+python manage.py startapp webapp
+
+Solved Excersise:
+Develop a simple Django web application to accept two numbers from user and add them
+up.
+A new project named MyForm is created which has the manage.py file. Inside MyForm
+a new app named formapp is created which contains all the application related files.
+# MyForm/settings.py
+INSTALLED_APPS = [
+'formapp',
+'django.contrib.admin',
+'django.contrib.auth',
+]
+TEMPLATES = [
+{
+'BACKEND': 'django.template.backends.django.DjangoTemplates',
+'DIRS': [os.path.join(BASE_DIR,'formapp/templates')],
+'APP_DIRS': True,
+},
+]
+
+# MyForm/urls.py from
+django.contrib import admin from
+django.urls import path
+from django.conf.urls import include, url
+urlpatterns = [
+path(r'^admin/',
+admin.site.urls),
+url('', include('formapp.urls')),
+]
+
+# formapp/urls.py from
+django.conf.urls import url from
+. import views
+urlpatterns = [
+url(' ', views.index, name='index'),
+]
+
+# formapp/views.py from
+django.shortcuts import render #
+Create your views here.
+def index(request):
+return render(request, 'basic.html')
+
+# formapp/templates/basic.html
+# create your html file
+
+Navigate to http://127.0.0.1:8000/, and find the output
