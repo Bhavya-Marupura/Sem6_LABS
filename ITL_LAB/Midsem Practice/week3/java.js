@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $(".button").click(function(){
+        capitals={
+            andhra:"vijayawada",
+            hyderabad:"hyd",
+            state3:"state3",
+            state4:"state4",
+        }
+        $(this).next().text(capitals[$(this).val()]);
+    })
+})

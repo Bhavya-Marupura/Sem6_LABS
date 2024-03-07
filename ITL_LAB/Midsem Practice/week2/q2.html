@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    Current time
+    <script language="javascript">
+        function message(){
+            setTimeout(function(){
+                const d = new Date();
+                const n = d.toLocaleTimeString();
+                document.getElementById("clock").innerHTML = n;
+            },1000);
+            const d = new Date();
+            var name = "bhavya";
+            var greeting;
+            var hours = d.getHours();
+            if(hours>0 && hours<11){
+                greeting = "good morning ";
+            }
+            else if(hours>11 && hours<16){
+                greeting="good afternoon ";
+            }
+            else if(hours>16 && hours<21){
+                greeting="good eveing ";
+            }
+            else{
+                greeting="good night ";
+            }
+            alert("HELLO"+greeting+name);
+        }
+        message();
+    </script>
+    <div id="clock"></div>
+</body>
+</html>
