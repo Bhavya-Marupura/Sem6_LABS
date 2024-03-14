@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <title>Exercise 1</title>
+</head>
+<body>
+<h2>Category Info</h2>
+<ul>
+    {% for category in categories %}
+        <li>
+            <b>{{ category.name }}</b>
+            <ul>
+                <li>Number of Visits: {{ category.number_of_visits }}</li>
+                <li>Number of Likes: {{ category.number_of_likes }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Page Info</h2>
+<ul>
+    {% for page in pages %}
+        <li>
+            <a href="{{ page.url }}"><b>{{ page.title }}</b></a>
+            <ul>
+                <li>Category: {{ page.category }} </li>
+                <li>Views: {{ page.views }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
