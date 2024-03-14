@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Exercise 2</title>
+</head>
+<body>
+<h3>Employee Search by Company</h3>
+<form action="{% url 'exercise2CompanyEmployees' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+</body>
+</html>

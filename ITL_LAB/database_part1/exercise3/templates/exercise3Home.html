@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <title>Exercise 3</title>
+</head>
+<body>
+<h2>Author Info</h2>
+<ul>
+    {% for author in authors %}
+        <li>
+            <b>{{ author.first_name }} {{ author.last_name }}</b>
+            <ul>
+                <li>Email: <a href = "mailto: {{ author.email }}">{{ author.email }}</a></li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Publisher Info</h2>
+<ul>
+    {% for publisher in publishers %}
+        <li>
+            <a href="{{ publisher.web_site }}"><b>{{ publisher.name }}</b></a>
+            <ul>
+                <li>Street Address:<br>{{ publisher.street_address|linebreaksbr }} </li>
+                <li>City: {{ publisher.city }}</li>
+                <li>State: {{ publisher.state }}</li>
+                <li>Country: {{ publisher.country }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Book Info</h2>
+<ul>
+    {% for book in books %}
+        <li>
+            <b>{{ book.title }}</b>
+            <ul>
+                <li>Authors:
+                    <ul>
+                        {% for author in book.authors.all %}
+                        <li>{{ author }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>Publisher: {{ book.publisher }}</li>
+                <li>Publication Date: {{ book.publication_date }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

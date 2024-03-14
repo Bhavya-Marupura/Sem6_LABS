@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <title>Exercise 2</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h2>Lives Info</h2>
+<table>
+    <tr>
+        <th>Person Name</th>
+        <th>Street</th>
+        <th>City</th>
+    </tr>
+    {% for live in lives %}
+    <tr>
+        <td>{{ live.person_name }}</td>
+        <td>{{ live.street }}</td>
+        <td>{{ live.city }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2>Works Info</h2>
+<table>
+    <tr>
+        <th>Person Name</th>
+        <th>Company</th>
+        <th>Salary</th>
+    </tr>
+    {% for work in works %}
+    <tr>
+        <td>{{ work.person_name }}</td>
+        <td>{{ work.company }}</td>
+        <td>{{ work.salary }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

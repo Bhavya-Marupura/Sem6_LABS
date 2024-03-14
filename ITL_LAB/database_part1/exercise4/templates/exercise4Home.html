@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <title>Exercise 4</title>
+</head>
+<body>
+<h3>Product Info</h3>
+<ul>
+    {% for product in products %}
+        <li>
+            <b>{{ product.title }}</b>
+            <ul>
+                <li>Price: {{ product.price }}</li>
+                <li>Description:<br>{{ product.description|linebreaksbr }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
