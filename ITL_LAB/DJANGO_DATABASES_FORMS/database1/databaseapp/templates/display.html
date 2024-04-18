@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td, tr{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>LIVES TABLE</h3>
+    <table>
+            <tr>
+                <td>Name</td>
+                <td>Street</td>
+                <td>City</td>
+                <td>Update</td>
+                <td>Delete</td>
+            </tr>
+            {% for l in living %}
+            <tr>
+                <td>{{l.name}}</td>
+                <td>{{l.street}}</td>
+                <td>{{l.city}}</td>
+                <td><a href="{% url 'updaterow' l.pk %}">
+                    <button>UpdateRow</button>
+                    </a></td>
+                <td><a href="{% url 'deleterow' l.pk %}">
+                    <button>DeleteRow</button>
+                    </a></td>
+            </tr>
+            {% endfor %}
+    </table>
+    <h3>WORKS TABLE</h3>
+    <table>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>company</td>
+                <td>salary</td>
+                <td>Update</td>
+                <td>Delete</td>
+            </tr>
+            {% for w in working %}
+            <tr>
+                <td>{{w.name}}</td>
+                <td>{{w.company}}</td>
+                <td>{{w.salary}}</td>
+                <td><a href="{}">
+                    <button>UpdateRow</button>
+                    </a></td>
+                <td><a href="{}">
+                    <button>DeleteRow</button>
+                    </a></td>
+            </tr>
+            {% endfor %}
+    </table>
+    </table>
+    <a href="{% url 'worksentry' %}">
+    <button>Add Employee</button>
+    </a>
+</body>
+</html>
