@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background-color: rgb(255, 192, 203);
+        }
+        p{
+            margin-bottom: 15px;
+            margin-top: 10px;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        table{
+            background-color: rgb(249, 179, 190);
+        }
+        th{
+            background-color: rgb(247, 167, 180);
+        }
+        th,td{
+            border: 0.5px solid gray;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <table class="d-block w-100">
+                <p>Monday</p>
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>9-10</td>
+                    <td>Program elective-II</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10-1030</td>
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>1030-1130</td>
+                    <td>EEFM</td>
+                    <td>Ms.GeethaLakshmi</td>
+                </tr>
+                <tr>
+                    <td>1130-1230</td>
+                    <td>Open Elective</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2-430</td>
+                    <td>IT Lab(B1)</td>
+                    <td>Dr. Ashwath Rao</td>
+                </tr>
+            </table>
+          </div>
+          <div class="carousel-item">
+            <p>Tuesday</p>
+            <table class="d-block w-100">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>9-1130</td>
+                    <td>DL(B1)/BDAL(B2)</td>
+                    <td>Dr. Muralikrishna S</td>
+                </tr>
+                <tr>
+                    <td>1-2</td>
+                    <td>Deep Learning</td>
+                    <td>Dr. Muralikrishna S</td>
+                </tr>
+                <tr>
+                    <td>2-3</td>
+                    <td>Open Elective</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3-330</td>
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>330-430</td>
+                    <td>Program elective-I</td>
+                    <td>-</td>
+                </tr>
+            </table>
+          </div>
+          <div class="carousel-item">
+            <p>Wednesday</p>
+            <table class="d-block w-100">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>8-9</td>
+                    <td>EEFM*/ITL theory</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>9-10</td>
+                    <td>Deep Learning</td>
+                    <td>Dr. Muralikrishna S</td>
+                </tr>
+                <tr>
+                    <td>10-1030</td> 
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>1030-1130</td>
+                    <td>Open Elective</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>1130-1230</td>
+                    <td>Big Data Analytics</td>
+                    <td>Dr.Prakash K Aithal</td>
+                </tr>
+            </table>
+          </div>
+          <div class="carousel-item">
+            <p>Thursday</p>
+            <table class="d-block w-100">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>9-1130</td>
+                    <td>IT Lab(B2)</td>
+                    <td>Mr.Ashwath Rao</td>
+                </tr>
+                <tr>
+                    <td>1-2</td>
+                    <td>Program elective I</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2-3</td> 
+                    <td>Big data analytics</td>
+                    <td>Dr.Prakash K Aithal</td>
+                </tr>
+                <tr>
+                    <td>3-330</td>
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>330-430</td>
+                    <td>Program elective II</td>
+                    <td>-</td>
+                </tr>
+            </table>
+          </div>
+          <div class="carousel-item">
+            <p>Friday</p>
+            <table class="d-block w-100">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>9-10</td>
+                    <td>Program elective-I</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10-1030</td>
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>1030-1130</td> 
+                    <td>Big data analytics</td>
+                    <td>Dr.Prakash K Aithal</td>
+                </tr>
+                <tr>
+                    <td>1130-1230</td>
+                    <td>EEFM</td>
+                    <td>Ms. GeethaLakshmi</td>
+                </tr>
+                <tr>
+                    <td>2-430</td>
+                    <td>BDAL(B1)/DL(B2)</td>
+                    <td>-</td>
+                </tr>
+            </table>
+          </div>
+          <div class="carousel-item">
+            <p>Saturday</p>
+            <table class="d-block w-100">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Professor</th>
+                </tr>
+                <tr>
+                    <td>1-2</td>
+                    <td>Program elective-II</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2-3</td>
+                    <td>EEFM</td>
+                    <td>Ms. GeethaLakshmi</td>
+                </tr>
+                <tr>
+                    <td>3-330</td> 
+                    <td>Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>330-430</td>
+                    <td>DL</td>
+                    <td>Dr. Muralikrishna S</td>
+                </tr>
+            </table>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+</body>
+</html>

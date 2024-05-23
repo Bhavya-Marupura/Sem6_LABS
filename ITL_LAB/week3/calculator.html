@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" langauge="javascript">
+		$(document).ready(function() {
+				$(".button").click(function() {
+					var op1 = $("#op1").val();
+					var op2 = $("#op2").val();
+					var ans=0;
+					var selected = $(this).val();
+					switch (selected) {
+						case '+':
+							ans = parseInt(op1) + parseInt(op2);
+							break;
+						case '-':
+							ans = parseInt(op1) - parseInt(op2);
+							break;
+						case '*':
+							ans = parseInt(op1) * parseInt(op2);
+							break;
+						case '/':
+							ans = parseInt(op1) / parseInt(op2);
+							break;
+						default:
+							ans = 0;
+							break;
+					}
+					$("#answer").text(ans);
+				});
+			}); 
+	</script>
+</head>
+<body>
+	<input type="text" value="Num1" id="op1">First Number</input>
+	<br>
+	<input type="text" value="Num2" id="op2">Second Number</input>
+	<br>
+	<input type="radio" value="+" id="+" class="button" style="margin-right: 10px;">add</input>
+	<input type="radio" value="-" id="-" class="button" style="margin-right: 10px;">sub</input>
+	<input type="radio" value="*" id="*" class="button" style="margin-right: 10px;">mul</input>
+	<input type="radio" value="/" id="/" class="button" style="margin-right: 10px;">divide</input>
+	<br>
+	<p>The answer is : <span id ="answer"></span></p>
+</body>
+</html>
