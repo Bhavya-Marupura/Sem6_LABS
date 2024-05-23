@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="'stylesheet" href="stle1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check position</title>
+</head>
+<body>
+    <h1 id="h1">heading 1</h1>
+    <h2 id="h2">heading 2</h2>
+    <script language="javascript">
+        var p1 = document.getElementById("h1");
+        var p2 = document.getElementById("h2");
+        var p1pos = p1.getBoundingClientRect();
+        var p2pos = p2.getBoundingClientRect();
+        alert("heading 1 x: "+p1pos.x +"y: "+p1pos.y);
+        alert("heading 2 x: "+p2pos.x + "y: "+p2pos.y);
+    </script>
+</body>
+</html>
